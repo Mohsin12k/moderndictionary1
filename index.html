@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Search From Dictionary</title>
+    <link rel="shortcut icon" href="img/searchEngineIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <script defer src="https://kit.fontawesome.com/36314ca1f4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="blur">
+        <h1 class="header_h1">Dictionary</h1>
+
+        <nav class="header_nav">
+            <p class="nav_p">Search Words</p>
+            <button class="nav_button searchBtn">
+                <i class="fa-solid fa-magnifying-glass magnifying"></i>
+            </button>
+        </nav>
+
+        </div>
+    </header>
+
+    <!-- main -->
+
+    <main class="main">
+
+        <section class="main_searchSection hide">
+            <input type="text" id="searchInput" placeholder="Type Word Here" required autocomplete="off">
+            <button class="searchWord" id="wordShadow">
+                search
+            </button>
+        </section>
+
+        <section class="main_resultSection">
+
+            <div class="result_wordAudio">
+                <h2 id="sample">Sample</h2>
+                <button class="audio_button" onclick="playSound()">
+                    <i class="fa-solid fa-circle-play"></i>
+                </button>
+            </div>
+
+            <div class="result_isNoun">
+                <p id="isNoun">/pos/</p>
+                <p id="wordExample">/sample/</p>
+            </div>
+
+            <div class="result_details">
+                <p class="result_answer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui!</p>
+                <p class="result_example">Lorem ipsum dolor sit amet.</p>
+            </div>
+
+        </section>
+
+        <audio id="sound"></audio>
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer class="footer">
+        <p>
+            Copyright &copy; <span class="datetime"></span>
+        </p>
+    </footer>
+</body>
+</html>
