@@ -80,14 +80,14 @@ const fetchData = async () => {
         else {
                console.error('API ERROR:', data);
                 mainResultSection.style.height = '10vh';
-                mainResultSection.innerHTML = `<p class="errorStyles">Not found!.Refresh the Page.</p>` 
+                mainResultSection.innerHTML = `<p class="errorStyles">Word Not found!.Refresh the Page.</p>` 
         }        
 
         } 
         catch(err) {
                 console.error("Fetch failed:", err);
                 mainResultSection.style.height = '10vh';
-                mainResultSection.innerHTML = `<p class="errorStyles">Sorry, your API URL is Wrong!.Refresh the Page.</p>` 
+                mainResultSection.innerHTML = `<p class="errorStyles">Wrong API!.Refresh the Page.</p>` 
         }
 }
 
