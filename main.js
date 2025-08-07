@@ -80,7 +80,7 @@ const fetchData = async () => {
         else {
                console.error('API ERROR:', data);
                 mainResultSection.style.height = '10vh';
-                mainResultSection.innerHTML = `<p class="errorStyles">Sorry, word is not found!.Refresh the Page.</p>` 
+                mainResultSection.innerHTML = `<p class="errorStyles">Not found!.Refresh the Page.</p>` 
         }        
 
         } 
