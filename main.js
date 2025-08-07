@@ -11,6 +11,7 @@ const isNoun = document.getElementById('isNoun');
 const wordExample = document.getElementById('wordExample');
 const resultAnswer = document.querySelector('.result_answer');
 const resultExample = document.querySelector('.result_example');
+const paragraph = document.querySelector('.errorStyles');
 const Sound = document.getElementById('sound');
 const footer = document.querySelector('.footer');
 const content = footer.querySelector('.datetime');
@@ -47,8 +48,7 @@ const fetchData = async () => {
         const word = inputValue.value.trim();
 
         if (word === "") {
-        mainResultSection.style.height = '10vh';
-        mainResultSection.innerHTML = `<p class="errorStyles">Please Enter Word</p>`;
+                alert('Please Enter A Word!');
         return;
         }
 
@@ -80,14 +80,14 @@ const fetchData = async () => {
         else {
                console.error('API ERROR:', data);
                 mainResultSection.style.height = '10vh';
-                mainResultSection.innerHTML = `<p class="errorStyles">Sorry, word is not found!</p>` 
+                mainResultSection.innerHTML = `<p class="errorStyles">Sorry, word is not found!.Refresh the Page.</p>` 
         }        
 
         } 
         catch(err) {
                 console.error("Fetch failed:", err);
                 mainResultSection.style.height = '10vh';
-                mainResultSection.innerHTML = `<p class="errorStyles">Sorry, your API URL is Wrong!</p>` 
+                mainResultSection.innerHTML = `<p class="errorStyles">Sorry, your API URL is Wrong!.Refresh the Page.</p>` 
         }
 }
 
